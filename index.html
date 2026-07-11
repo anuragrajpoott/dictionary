@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dictionary</title>
     <link rel="stylesheet" href="style.css">
-    <title>myDictionary</title>
 </head>
 <body>
-    <div class="main">
-       <form id="form">
-        <label for="input"></label>
-        <input type="text" placeholder="enter word to search" name="input" id="input">
-        <button id="button">search</button>
-       </form>
-       <div id="output"></div>
-    </div>
+    <main class="main">
+        <h1>My Dictionary</h1>
+        <p class="subtitle">Search meanings, pronunciation, and examples.</p>
+
+        <form id="dictionary-form">
+            <input
+                type="text"
+                id="wordInput"
+                placeholder="Enter a word..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="searchBtn">
+                Search
+            </button>
+        </form>
+
+        <section class="result-container">
+            <div id="output">
+                Search for a word to see its meaning.
+            </div>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
